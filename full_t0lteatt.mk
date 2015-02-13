@@ -21,12 +21,11 @@
 # lines, full and toro, hence its name.
 #
 
-$(call inherit-product-if-exists, vendor/samsung/t0lteatt/t0lteatt-vendor.mk)
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
+$(call inherit-product, device/samsung/t0lteatt/t0lteatt.mk)
 $(call inherit-product, device/samsung/t0lte/t0lte.mk)
 
 # Discard inherited values and use our own instead.
